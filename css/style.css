@@ -1,0 +1,28 @@
+.character{
+    background:pink;
+    cursor:pointer;
+    &.active{
+        animation: flashes 300ms linear;
+    }
+}
+
+
+
+
+
+
+@keyframes flashes{
+    0%{
+        filter:brightness(100%);
+    }20%{
+        filter:brightness(150%);
+    }40%{
+        filter:brightness(100%);
+    }60%{
+        filter:brightness(150%);
+    }80%{
+        filter:brightness(100%);
+    }100%{
+        filter:brightness(150%);
+    }
+}
