@@ -1,21 +1,65 @@
-BODY{
-    text-align:"center";
-    align-content: center;
-    align-items: center;
+
+body{
+    margin:30px;
+    padding:30px;
+    background-color: white;
+
 
 }
 
-div{
-    align-items: center;
+#container{
+
+    text-align: center;
+
+}
+
+#characterSelect{
+
+    align-content: center;
+
+    text-align: center;
+}
+
+#description{
+    text-align: center;
+}
+
+#characterSelectLogo{
+
+    align-content: center;
+    left:300px;
+    animation: rotation 5s infinite ease-in-out;
+
+
+
 }
 
 .character{
     background:grey;
     cursor:pointer;
+    text-align: center;
+    box-shadow: 5px 10px 10px 5px gray;
+
+    .character__name{
+        font-size: xx-large;
+        font-family:Arial, Helvetica, sans-serif;
+        font-weight: 900;
+    }
+
+    .character__power{
+        font-family:Arial, Helvetica, sans-serif;
+        font-size: x-large;
+    }
+    
+
+
+
 
 
     .character__img{
         filter:grayscale(100%);
+        transform:skew(5deg);
+        padding:20px;
 
     }
     &.active{
@@ -33,6 +77,10 @@ div{
 
 }
 
+.character:hover{
+    transform:scale(1.1)
+}
+
 
 @keyframes flashes{
     0%{
@@ -47,5 +95,14 @@ div{
         filter:brightness(100%);
     }100%{
         filter:brightness(150%);
+    }
+}
+
+@keyframes rotation {
+    from {
+        transform: rotateY(0deg);
+    }
+    to {
+        transform: rotateY(360deg);
     }
 }
