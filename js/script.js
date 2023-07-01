@@ -6,14 +6,14 @@ var characters=[
         name:"Shalini",
         id:"01",
         power:"Supreme Leader",
-        description:"Shalini or also known as Supreme Leader Shalini is the rightful ruler of earth and its inhabitants. Shalini has the power to manifest destiny into reality",
+        description:"Shalini or also known as Supreme Leader Shalini is the rightful ruler of earth and its inhabitants.<br> Shalini has the power to manifest destiny into reality",
         imgSrc:"https://www.igus.sg/contentData/Corporate_Files/address/img/SG/DEVADAS_Shalini_2017%20270270.jpg"
     },
     {
         name:"Brian",
         id:"02",
         power:"Marketing",
-        description:"Brian Lau or Brian the breaker is the toughest man in igus. Despite his brute overwhelming strength, Deep down he has a gentle heart",
+        description:"Brian Lau or Brian the breaker is the toughest man in igus. <br>Despite his brute overwhelming strength, Deep down he has a gentle heart",
         imgSrc:"https://www.igus.sg/contentData/Corporate_Files/address/img/SG/LAU_Brian%202021%20270x270.png"
     }
 ];
@@ -30,7 +30,8 @@ characters.forEach(thecharacter => {
     newCharacter.description=thecharacter.description;
     newCharacter.innerHTML=`<img class="character__img" src="${thecharacter.imgSrc}"/> <br>
                             <p class="character__name">${thecharacter.name}</p><br>
-                            <p class="character__power">${thecharacter.power}</p>`;
+                            <p class="character__power">${thecharacter.power}</p>
+                            <p class="thedesc">${newCharacter.description}</p>`;
 
     document.getElementById('character-list').appendChild(newCharacter);
 
@@ -40,8 +41,12 @@ characters.forEach(thecharacter => {
         }
         newCharacter.classList.add('active');
 
+
         
-        desc.innerHTML=`<p id="thedesc">${newCharacter.description}</p>`;
+
+
+        
+        // desc.innerHTML=`<p id="thedesc">${newCharacter.description}</p>`;
 
     }
 

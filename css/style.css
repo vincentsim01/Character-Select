@@ -1,8 +1,11 @@
 
 body{
-    margin:30px;
-    padding:30px;
+
     background-color: white;
+    background-repeat:no-repeat;
+    background-size:100%;
+    /* background-image: url('image/orange.gif');  */
+
 
 
 }
@@ -16,8 +19,15 @@ body{
 #characterSelect{
 
     align-content: center;
+    background:white;
 
     text-align: center;
+    margin-left: 100px;
+    margin-right:100px;
+    transform:skewX(10deg);
+    border-radius:10px;
+    border: yellow 10px ridge;
+
 }
 
 #description{
@@ -27,11 +37,16 @@ body{
 #characterSelectLogo{
 
     align-content: center;
-    left:300px;
+
     animation: rotation 5s infinite ease-in-out;
 
 
 
+
+}
+
+.thedesc{
+    display:none;
 }
 
 .character{
@@ -39,6 +54,10 @@ body{
     cursor:pointer;
     text-align: center;
     box-shadow: 5px 10px 10px 5px gray;
+    width:400px;
+    height:700px;
+    overflow:auto;
+    border-radius:10px;
 
     .character__name{
         font-size: xx-large;
@@ -64,12 +83,26 @@ body{
     }
     &.active{
         animation: flashes 300ms linear;
+        border: yellow 10px ridge;
 
         background:orange;
         .character__img{
             filter:grayscale(0);
 
      
+        }
+
+        .thedesc{
+            display:inline-block;
+            font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-size: 15px;
+            text-align: center;
+            margin:15px;
+            padding:15px;
+            border:2px black dashed;
+            background:orangered;
+            color:white;
+            overflow: auto;
         }
  
     }
